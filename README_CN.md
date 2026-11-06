@@ -14,6 +14,12 @@
 
 ## 快速上手
 
+### Windows 可执行文件
+
+在 Windows 上可直接运行打包好的 `dist/LinkMapView.exe`，无需单独安装 Python。选择 TI linker `.map` 文件并生成报告后，可在 HTML 中查看总览和明细视图。
+
+### 从 Python 运行
+
 需要 Python 3 和 Tkinter。本项目不依赖第三方 Python 包。很多 Python 安装已包含 Tkinter；部分 Linux 系统需要单独安装，例如 Debian/Ubuntu：`sudo apt install python3-tk`。
 
 安装项目依赖并启动：
@@ -23,7 +29,15 @@ python -m pip install -r requirement.txt
 python LinkMapView.py
 ```
 
-在窗口中选择 TI linker `.map` 文件，点击“生成 HTML”。默认报告会生成在 map 文件旁边，沿用原文件名并将扩展名改为 `.html`；也可以自行指定输出位置。用浏览器打开报告后，就能查看排行、筛选明细，并导出当前结果为 CSV。
+在窗口中选择 TI linker `.map` 文件，点击“生成 HTML”。默认报告会生成在 map 文件旁边，沿用原文件名并将扩展名改为 `.html`；也可以自行指定输出位置。用浏览器打开报告后，可以查看总览和明细视图：总览展示 Memory 使用情况及 section、库/目标文件占用排行；明细视图支持搜索、筛选输入 section 并将当前结果导出为 CSV。
+
+总览示例：
+
+![总览 HTML 视图](image/total.png)
+
+明细示例：
+
+![明细 HTML 视图](image/detail.png)
 
 在容器、SSH 等没有图形显示的环境中，直接把 map 文件作为参数传入即可，无需启动 GUI：
 

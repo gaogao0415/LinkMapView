@@ -14,6 +14,12 @@
 
 ## Get Started
 
+### Windows executable
+
+On Windows, run the packaged `dist/LinkMapView.exe` directly; a separate Python installation is not required. Choose a TI linker `.map` file and generate the report to view its overview and detail views in HTML.
+
+### Run from Python
+
 Requirements: Python 3 and Tkinter. No third-party Python packages are needed. Tkinter is included with many Python distributions; on some Linux systems, install it separately (for example, `sudo apt install python3-tk` on Debian/Ubuntu).
 
 Install the project's Python requirements and launch the app:
@@ -23,7 +29,15 @@ python -m pip install -r requirement.txt
 python LinkMapView.py
 ```
 
-Choose a TI linker `.map` file in the window and click **Generate HTML**. By default, the report lands beside the map file with the same base name and an `.html` extension. Pick a different output path in the app if you prefer. Open the generated HTML in a browser; filter the details, inspect the rankings, and export the current view as CSV.
+Choose a TI linker `.map` file in the window and click **Generate HTML**. By default, the report lands beside the map file with the same base name and an `.html` extension. Pick a different output path in the app if you prefer. Open the generated HTML in a browser to view the overview and details: the overview summarizes memory usage and ranks sections, libraries, and object files; the details view lets you search and filter input sections and export the current results as CSV.
+
+Overview example:
+
+![HTML overview](image/total.png)
+
+Details example:
+
+![HTML details](image/detail.png)
 
 No desktop display (for example, in a container or SSH session)? Pass the map file directly; the report is generated without opening a GUI:
 
