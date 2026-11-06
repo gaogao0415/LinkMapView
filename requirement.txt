@@ -1,0 +1,2 @@
+# LinkMapView uses only the Python standard library; no pip packages are required.
+# Tkinter is provided by the Python installation or installed via the OS package manager.
